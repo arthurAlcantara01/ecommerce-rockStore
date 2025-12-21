@@ -1,6 +1,5 @@
 header{
     background-color: var(--primary-color);
-    z-index: -1;
 }
 
 .innerContent{
