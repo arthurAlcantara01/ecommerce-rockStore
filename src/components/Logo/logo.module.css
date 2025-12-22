@@ -1,0 +1,13 @@
+.logo{
+    color: var(--primary-color);
+}
+
+.logoSpan{
+    color: var(--dark-color);
+}
+
+@media (max-width: 920px) {
+    .logo{
+        font-size: 1.2rem;
+    }    
+}

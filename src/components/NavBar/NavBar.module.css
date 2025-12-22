@@ -13,14 +13,6 @@
     max-width: 1300px;
 }
 
-.logo{
-    color: var(--primary-color);
-}
-
-.logoSpan{
-    color: var(--dark-color);
-}
-
 .list{
     display: flex;
     list-style: none;
@@ -93,9 +85,6 @@
 }
  
 @media (max-width: 920px) {
-    .logo{
-        font-size: 1.2rem;
-    }    
     nav{
         position: absolute;
         top: 55px;

@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import ProductList from './components/ProductList'
 import ExcSection from './components/ExcSection'
 import TestimonialsList from './components/testimonialsList'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <ExcSection/>
         <TestimonialsList/>
       </main>
+      <Footer/>
     </>
   )
 }

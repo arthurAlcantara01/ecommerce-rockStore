@@ -7,6 +7,7 @@ type props = {
 }
 
 function ProductList({products}: props){
+
     return (
         <div className={styles.productList}>
             {products.map((product) => (

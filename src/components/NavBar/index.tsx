@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router} from "react-router-dom";
 import styles from "./NavBar.module.css"
 import { useState } from "react";
+import Logo from "../Logo";
 
 function NavBar(){
 
@@ -13,10 +14,7 @@ function NavBar(){
         <Router>
             <div className={styles.content}>
                 <div className={styles.innerContent}>
-                    <h1 className={styles.logo}>
-                        ROCK
-                        <span className={styles.logoSpan}>STORE</span>
-                    </h1>
+                    <Logo/>
                     <nav className={`${show && styles.show}`}>
                         <ul className={styles.list}>
                             <li className={styles.listItem}>
