@@ -1,11 +1,10 @@
 import styles from "./footer.module.css";
 import appStore from "../../img/app-store.png";
 import playStore from "../../img/play-store.png";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Footer(){
     return (
-        <Router>
             <footer className={styles.footer}>
                 <div className={styles.innerContent}>
                     <div className={styles.downloadOptions}>
@@ -24,7 +23,7 @@ function Footer(){
                             <span className={styles.logoSpan}>STORE</span>
                         </h1>
                         <p className={styles.textFooter}>
-                            Meu objetivo é me tornar um ótimo desenvolvedor web e evoluir em outras áreas também
+                            A RockStore oferece produtos tecnológicos de qualidade, com foco em inovação, confiança e uma ótima experiência de compra.
                         </p>
                     </div>
 
@@ -51,7 +50,6 @@ function Footer(){
                     <p className={styles.copy}>Copyright 2030 - Arthur Alcântara - Todos Direitos Reservados</p>
                 </div>
             </footer>
-        </Router>
     )
 }
 

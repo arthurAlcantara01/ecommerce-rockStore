@@ -1,38 +1,38 @@
 import { useEffect, useState } from 'react'
-import styles from './App.module.css'
-import Header from './components/Header'
 import NavBar from './components/NavBar'
-import ProductList from './components/ProductList'
-import ExcSection from './components/ExcSection'
-import TestimonialsList from './components/testimonialsList'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import { Route, Routes} from 'react-router-dom'
+import Products from './pages/Products'
+import SideBarCar from './components/SideBarCar'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Account from './pages/Account'
 
 function App() {
 
   const [products, setProducts] = useState([])
+  const [showSideBAr, setShowSideBAr] = useState(false);
 
   useEffect(()=>{
     fetch("/db.json").then(res => res.json()).then(data => setProducts(data.products));
   },[])
 
+
   return (
     <>
-      <NavBar/>
-      <main>
-        <Header/>
-        <div className={styles.innerContent}>
-            <div className={styles.sectionTitle}>
-                <h3 className={styles.title}>Produtos selecionados</h3>
-                <div className={styles.underline}></div>
-            </div>
-            <div className={styles.mainContent}>
-                <ProductList products={products}/>
-            </div>
-        </div>  
-        <ExcSection/>
-        <TestimonialsList/>
-      </main>
-      <Footer/>
+        <NavBar setShowSideBar={setShowSideBAr}/>
+        <SideBarCar setShowSideBar={setShowSideBAr} show={showSideBAr}/>
+          <main>
+            <Routes>
+              <Route path='/' element={<Home products={products} />} />
+              <Route path='/products' element={<Products products={products}/>}/>
+              <Route path='/about' element={<About/>}/>
+              <Route path='/contact' element={<Contact/>}/>
+              <Route path='/account' element={<Account/>}/>
+            </Routes>
+          </main>
+        <Footer/>
     </>
   )
 }

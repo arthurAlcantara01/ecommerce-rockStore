@@ -1,21 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { productTp } from "../../constants/types";
 import styles from "./product.module.css";
-import { Link, BrowserRouter as Router} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { faCartShopping, faMoneyBill, faStar as faStarEnchida } from "@fortawesome/free-solid-svg-icons";
 import {faStar as faStarBorda} from "@fortawesome/free-regular-svg-icons"
+import {useCartContext } from "../../context/CartContext";
 
 
 type props ={
-    product: productTp
+    product: productTp;
 }
 
 function product({product}: props){
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const {addProduct} = useCartContext();
+
     const {id, name, image, rating, price} = product;
 
     return (
-    <Router>
         <div className={styles.product}>
             <img src={image} alt={name} className={styles.img}/>
             <p className={styles.name}>{name}</p>
@@ -37,13 +40,12 @@ function product({product}: props){
                     <span>Comprar Agora</span>
                     <FontAwesomeIcon icon={faMoneyBill}/>
                 </Link>
-                <button className={`${styles.addToCar} ${styles.btnIcon}`}>
+                <button onClick={()=> addProduct(product)} className={`${styles.addToCar} ${styles.btnIcon}`}>
                     <span>Adicionar ao carinho</span>
                     <FontAwesomeIcon icon={faCartShopping}/>
                 </button>
             </div>
         </div>
-    </Router>
     )
 }
 

@@ -1,17 +1,22 @@
 import { faBars, faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router} from "react-router-dom";
 import styles from "./NavBar.module.css"
 import { useState } from "react";
 import Logo from "../Logo";
+import { useCartContext } from "../../context/CartContext";
 
-function NavBar(){
+type props = {
+    setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function NavBar({setShowSideBar}: props){
 
     const [show, setShow] = useState(false);
 
+    const {totalItens} = useCartContext()
+
     return(
-        <Router>
             <div className={styles.content}>
                 <div className={styles.innerContent}>
                     <Logo/>
@@ -39,9 +44,9 @@ function NavBar(){
                             <input className={styles.input} type="search" placeholder="Procurar"/>
                             <FontAwesomeIcon className={styles.iconS} icon={faSearch}/>
                         </div>
-                        <button className={styles.littleCar}>
+                        <button onClick={()=> setShowSideBar(true)} className={styles.littleCar}>
                             <FontAwesomeIcon className={styles.icon} icon={faShoppingCart}/>
-                            <div className={styles.productsCount}>0</div>
+                            <div className={styles.productsCount}>{totalItens}</div>
                         </button>
                         <button onClick={()=> setShow(!show)} className={styles.buttonMenu}>
                             <FontAwesomeIcon className={styles.icon} icon={faBars}/>
@@ -49,7 +54,6 @@ function NavBar(){
                     </div>
                 </div>
             </div>
-    </Router>
     )
 }
 

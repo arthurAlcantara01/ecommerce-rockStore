@@ -1,4 +1,4 @@
-import { Link, BrowserRouter as Router } from "react-router-dom"
+import { Link} from "react-router-dom"
 import styles from "./excSection.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
@@ -6,7 +6,6 @@ import exclusiva from "../../img/exclusive.png";
 
 function ExcSection(){
     return (
-        <Router>            
             <div className={styles.exclusiveSection}>
                 <div className={styles.innerContent}>
                         <div className={styles.leftSide}>
@@ -25,7 +24,6 @@ function ExcSection(){
                     </div>
                 </div>
             </div>
-        </Router>
     )
 }
 

@@ -1,5 +1,4 @@
 import { Link} from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
 import styles from "./Header.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight} from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +6,6 @@ import headerImg from "../../img/header-image.png"
 
 function Header(){
     return (
-        <Router>
             <header>
                 <div className={styles.innerContent}>
                     <div className={styles.leftSide}>
@@ -23,7 +21,6 @@ function Header(){
                     </div>
                 </div>
             </header>
-        </Router>
     )
 }
 
