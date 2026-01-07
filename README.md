@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Ecommerce RockStore
+## Sobre o projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de e-commerce de roupas/sapatos (RockStore) desenvolvido como parte dos meus estudos em desenvolvimento frontend.
+Este projeto foi criado a partir de um vídeo tutorial no YouTube, com adaptações e customizações pessoais para reforçar meu aprendizado em estrutura de layout, responsividade e manipulação de componentes visuais. 
 
-Currently, two official plugins are available:
+A landing page foi planejada para simular uma interface de e-commerce moderna, apresentando produtos, categorias e elementos típicos de loja online.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+👉 Demo online:
+https://ecommerce-rock-store.vercel.app
+ 
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- TypeScript
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- GitHub (controle de versão)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Características
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Layout moderno inspirado em e-commerce real
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Interfaces de produto e categorias
+
+- Design totalmente responsivo
+
+- Código organizado, com foco em estrutura e boas práticas
+
+- Projeto adaptado para estudo e portfólio
+
+## Aprendizados
+
+- Durante o desenvolvimento deste projeto, aprofundei meu entendimento em:
+
+- Desenvolvimento de interfaces com React e TypeScript
+
+- Organização de projetos com Vite
+
+- Estilização com CSS moderno
+
+- Conceitos de layout responsivo para e-commerce
+
+Estruturação de componentes reutilizáveis
+
+## Como executar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/arthurAlcantara01/ecommerce-rockStore.git
+
+# Navegue até a pasta do projeto
+cd ecommerce-rockStore / my-react-app
+
+# Instale as dependências
+npm install
+
+# Inicie o projeto em modo de desenvolvimento
+npm run dev
