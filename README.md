@@ -1,67 +1,102 @@
-# Ecommerce RockStore
+# RockStore – E-commerce Frontend
 ## Sobre o projeto
 
-Projeto de e-commerce de roupas/sapatos (RockStore) desenvolvido como parte dos meus estudos em desenvolvimento frontend.
-Este projeto foi criado a partir de um vídeo tutorial no YouTube, com adaptações e customizações pessoais para reforçar meu aprendizado em estrutura de layout, responsividade e manipulação de componentes visuais. 
+A RockStore é um projeto de e-commerce frontend desenvolvido com foco em arquitetura de aplicações React, organização de código, experiência do usuário e simulação de um sistema real de compras.
 
-A landing page foi planejada para simular uma interface de e-commerce moderna, apresentando produtos, categorias e elementos típicos de loja online.
+O projeto apresenta uma loja virtual completa, com listagem de produtos, carrinho de compras funcional, controle de quantidade, cálculo automático de valores e persistência de dados no navegador.
+
+Foi desenvolvido com o objetivo de estudo prático, aplicando conceitos modernos do desenvolvimento frontend e boas práticas utilizadas em projetos reais.
+
 
 ---
-
-👉 Demo online:
-https://ecommerce-rock-store.vercel.app
- 
----
-
 ## Tecnologias utilizadas
 
-- React
-
-- TypeScript
+- React.js
 
 - Vite
 
-- CSS
+- TypeScript
+
+- CSS Modules
+
+- Context API
+
+- LocalStorage
+
+- React Router DOM
 
 - GitHub (controle de versão)
 
+- Vercel (deploy)
+
+---
+
+## Funcionalidades
+
+- Listagem de produtos
+
+- Adição e remoção de produtos do carrinho
+
+- Controle de quantidade por item
+
+- Cálculo automático do valor total
+
+- Persistência do carrinho no LocalStorage
+
+- Navegação entre páginas (Home, Products, About, Contact)
+
+- Layout moderno e responsivo
+
+- Estrutura organizada por componentes
+
+- Simulação de fluxo real de e-commerce
+
+---
 ## Características
 
-- Layout moderno inspirado em e-commerce real
+- Arquitetura escalável
 
-- Interfaces de produto e categorias
+- Código organizado e tipado
 
-- Design totalmente responsivo
+- Separação clara de responsabilidades
 
-- Código organizado, com foco em estrutura e boas práticas
+- Uso de estado global para o carrinho
 
-- Projeto adaptado para estudo e portfólio
+- Persistência de dados entre sessões
 
+- Design limpo e focado em usabilidade
+
+- Preparado para futura integração com backend
+
+---
 ## Aprendizados
 
-- Durante o desenvolvimento deste projeto, aprofundei meu entendimento em:
+- Gerenciamento de estado global com Context API
 
-- Desenvolvimento de interfaces com React e TypeScript
+- Persistência de dados com LocalStorage
 
-- Organização de projetos com Vite
+- Boas práticas em React com TypeScript
 
-- Estilização com CSS moderno
+- Organização de projetos React para aplicações reais
 
-- Conceitos de layout responsivo para e-commerce
+- Diferença entre ambiente de desenvolvimento e produção
 
-Estruturação de componentes reutilizáveis
+- Deploy de aplicações frontend com Vercel
 
-## Como executar localmente
+- Tratamento correto de assets em produção (Vite)
+
+---
+## Como executar o projeto localmente
 
 ```bash
 # Clone o repositório
 git clone https://github.com/arthurAlcantara01/ecommerce-rockStore.git
 
-# Navegue até a pasta do projeto
-cd ecommerce-rockStore / my-react-app
+# Entre na pasta do projeto
+cd ecommerce-rockStore
 
 # Instale as dependências
 npm install
 
-# Inicie o projeto em modo de desenvolvimento
+# Execute o projeto em ambiente de desenvolvimento
 npm run dev
